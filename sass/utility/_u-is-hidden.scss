@@ -1,0 +1,7 @@
+@use "../global/" as g;
+
+.u-is-hidden-md {
+  @include g.mq(md) {
+    display: none;
+  }
+}

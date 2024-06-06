@@ -1,0 +1,10 @@
+@use "../global/" as g;
+
+.l-inner {
+  padding-block: 10rem;
+  margin-inline: auto;
+  @include g.mq(sm) {
+    padding-bottom: 5rem;
+    padding-inline: 2rem;
+  }
+}

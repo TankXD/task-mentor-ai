@@ -1,0 +1,28 @@
+@use "../global/" as g;
+
+.l-problem {
+  position: relative;
+  z-index: 1;
+  margin-top: -10.4rem;
+  position: absolute;
+  width: 100%;
+  @include g.mq(sm) {
+    margin-top: 0;
+    position: relative;
+  }
+}
+
+.l-problem__inner {
+  display: flex;
+  justify-content: center;
+  gap: 8.4rem;
+  padding-block: 3rem;
+
+  background-color: g.$c-white;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  max-width: min(85%, 90rem);
+  margin-inline: auto;
+  @include g.mq(sm) {
+    box-shadow: none;
+  }
+}

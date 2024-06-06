@@ -1,0 +1,49 @@
+// - color - //
+$c-base: #202020;
+$c-gray: #f5f5f5;
+$c-white: #fdfdfd;
+$c-blue: #599cc2;
+$c-gray-dark: #a1a1a1;
+$c-gray-light: #dcdcdc;
+
+// - font-size //
+// pc : 12px ~ 72px
+// sp : 14px ~ 38px
+$fz-base: 1.4rem;
+$fz-xl: 2.4rem;
+$fz-lg: 1.8rem;
+$fz-md: 1.6rem;
+$fz-xxs: 1.2rem;
+$fz-28-52: clamp(2.8rem, 1.086rem + 2.857vw, 5.2rem);
+$fz-38-72: clamp(3.8rem, -0.086rem + 5.06vw, 7.2rem);
+$fz-16-18: clamp(1.6rem, 1.371rem + 0.298vw, 1.8rem);
+$fz-16-24: clamp(1.6rem, 1.101rem + 1.159vw, 2.4rem);
+$fz-13-18: clamp(1.3rem, 0.988rem + 0.725vw, 1.8rem);
+$fz-18-24: clamp(1.8rem, 1.426rem + 0.87vw, 2.4rem);
+$fz-14-18: clamp(1.4rem, 0.943rem + 0.595vw, 1.8rem);
+$fz-12-16: clamp(1.2rem, 0.743rem + 0.595vw, 1.6rem);
+// - line-height - //
+// pc : 1.5
+// sp : 1.8
+$lh-pc: 1.5;
+$lh-sp: 1.8;
+
+// - padding inline - //
+$padding-inline: 2rem;
+
+// - width - //
+// pc : 1440px
+// sp : 430px
+$inner-width: 1120px;
+
+// - break point - //
+$breakpoints: (
+  sm: "not screen and (min-width: 768px)",
+  md: "screen and (min-width: 768px)",
+  md-2: "screen and (min-width: 1000px)",
+  lg: "screen and (min-width: 1120px)",
+  xl: "screen and (min-width: 1400px)",
+) !default;
+
+// - z-index - //
+$z-header: 600;

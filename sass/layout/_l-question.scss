@@ -1,0 +1,11 @@
+@use "../global/" as g;
+.l-question {
+  background-color: g.$c-gray;
+}
+
+.l-question__inner {
+  padding: 10rem 5rem;
+  @include g.mq(sm) {
+    padding: 5rem 2rem;
+  }
+}

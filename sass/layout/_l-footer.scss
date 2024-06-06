@@ -1,0 +1,14 @@
+@use "../global/" as g;
+
+.l-footer {
+  background-color: g.$c-base;
+}
+
+.l-footer__inner {
+  max-width: calc(144rem + 5rem * 2);
+  padding: 3rem 5rem;
+  margin: 0 auto;
+  @include g.mq(sm) {
+    padding: 3rem 2rem;
+  }
+}

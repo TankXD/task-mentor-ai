@@ -1,0 +1,14 @@
+@use "../global/" as g;
+
+.l-company {
+  background: url("../img/company/company-bg.webp") no-repeat center center / cover;
+  @include g.mq(sm) {
+    background: url("../img/company/company-bg-sp.webp") no-repeat center center / cover;
+  }
+}
+
+.l-company__inner {
+  margin-inline: auto;
+  max-width: calc(90rem + 3rem * 2);
+  padding-inline: 3rem;
+}

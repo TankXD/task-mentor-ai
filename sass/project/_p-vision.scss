@@ -1,0 +1,76 @@
+@use "../global/" as g;
+
+.p-vision__body {
+  margin-top: 7rem;
+  @include g.mq(sm) {
+    margin-top: 3rem;
+  }
+}
+
+.p-vision__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12rem;
+  @include g.mq(sm) {
+    gap: 5rem;
+  }
+}
+
+.p-vision__item {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+
+  @include g.mq(sm) {
+    flex-direction: column;
+  }
+  @include g.mq(md) {
+    gap: 3rem;
+  }
+  @include g.mq(md-2) {
+    gap: 5rem;
+  }
+}
+.p-vision__item:nth-child(even) {
+  flex-direction: row;
+  @include g.mq(sm) {
+    flex-direction: column;
+  }
+}
+
+.p-vision__item__img {
+  min-width: 30rem;
+  flex: 1;
+  img {
+  }
+}
+
+.p-vision__text-wrap {
+  max-width: 57rem;
+  @include g.mq(sm) {
+    margin-top: 3rem;
+  }
+}
+
+.p-vision__item__title {
+  color: g.$c-blue;
+  font-size: clamp(2.4rem, 0.4rem + 2vw, 3.2rem);
+  font-weight: 700;
+  margin-bottom: 3rem;
+  @include g.mq(sm) {
+    margin-bottom: 2rem;
+  }
+}
+
+.p-vision__item__description {
+  font-size: g.$fz-md;
+  & + & {
+    margin-top: 2rem;
+    @include g.mq(sm) {
+      margin-top: 1.5rem;
+    }
+  }
+  @include g.mq(md) {
+    font-size: clamp(1.4rem, 0.9rem + 0.5vw, 1.6rem);
+  }
+}

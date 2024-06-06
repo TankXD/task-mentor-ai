@@ -1,0 +1,20 @@
+@use "../global/" as g;
+
+.l-pickup {
+  overflow: hidden;
+  background: url("../img/pickup/pickup-bg.webp") no-repeat center center / cover;
+  @include g.mq(sm) {
+    background: url("../img/pickup/pickup-bg-sp.webp") no-repeat center center / cover;
+  }
+}
+
+.l-pickup__inner {
+  padding-block: 5rem 8.8rem;
+  padding-inline: 2rem;
+  margin-inline: auto;
+  @include g.mq(md) {
+    padding-block: 10rem 18.2rem;
+    max-width: calc(96.6rem + 10rem * 2);
+    padding-inline: 10rem;
+  }
+}

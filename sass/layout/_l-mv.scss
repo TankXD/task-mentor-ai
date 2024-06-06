@@ -1,0 +1,24 @@
+@use "../global/" as g;
+
+.l-mv {
+  margin-top: 8rem;
+  height: 67.8rem;
+  position: relative;
+  @include g.mq(sm) {
+    height: clamp(49.7rem, 39.904rem + 22.781vw, 57.4rem);
+  }
+}
+
+.l-mv__inner {
+  max-width: calc(g.$inner-width + 2rem * 2);
+  padding-block: 5rem;
+  padding-inline: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-inline: auto;
+  @include g.mq(sm) {
+    flex-direction: column;
+    align-items: center;
+  }
+}

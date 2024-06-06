@@ -1,0 +1,97 @@
+@use "../global/" as g;
+
+.c-btn {
+  border-radius: 5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.c-btn--blue {
+  background-color: g.$c-blue;
+  color: g.$c-white;
+
+  border: 1px solid g.$c-blue;
+  &:hover {
+    background-color: g.$c-white;
+    color: g.$c-blue;
+    border: 1px solid g.$c-blue;
+  }
+}
+
+.c-btn--blue-r {
+  background-color: g.$c-white;
+  color: g.$c-blue;
+
+  border: 1px solid g.$c-blue;
+  &:hover {
+    background-color: g.$c-blue;
+    color: g.$c-white;
+    border: 1px solid g.$c-blue;
+  }
+}
+
+.c-btn--white {
+  background-color: g.$c-white;
+  color: g.$c-base;
+
+  border: 1px solid g.$c-base;
+  &:hover {
+    background-color: g.$c-base;
+    color: g.$c-white;
+  }
+}
+
+.c-btn--header {
+  padding-block: 1.5rem;
+  width: 20rem;
+}
+
+.c-btn--register {
+  display: flex;
+
+  .icon-register {
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background-color: g.$c-white;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 2rem;
+      height: 2rem;
+      background: url("../img/icon/register.svg") no-repeat center/contain;
+    }
+  }
+  span:last-child {
+    flex: 1;
+  }
+}
+
+.c-btn--contact {
+  display: flex;
+  .icon-contact {
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background-color: g.$c-base;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 2rem;
+      height: 2rem;
+      background: url("../img/icon/contact.svg") no-repeat center/contain;
+    }
+  }
+  span:last-child {
+    flex: 1;
+  }
+}

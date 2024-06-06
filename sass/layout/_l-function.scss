@@ -1,0 +1,12 @@
+@use "../global/" as g;
+.l-funciton {
+  background-color: g.$c-gray;
+}
+.l-function__inner {
+  margin: 0 auto;
+  padding: 11rem 2rem;
+  max-width: calc(90rem + 2rem * 2);
+  @include g.mq(sm) {
+    padding: 5rem 2rem;
+  }
+}

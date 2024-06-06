@@ -1,0 +1,73 @@
+@use "../global/" as g;
+
+.p-cta__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 3rem;
+  @include g.mq(lg) {
+    flex-direction: row;
+  }
+}
+
+.p-cta__card {
+  background-color: g.$c-white;
+  border-radius: 1.5rem;
+
+  width: 100%;
+  max-width: 54.5rem;
+
+  padding-block: 5rem;
+  @include g.mq(sm) {
+    padding-block: 2rem;
+  }
+  .p-cta__card__description {
+    text-align: center;
+    font-size: g.$fz-lg;
+    font-weight: 700;
+    @include g.mq(sm) {
+      font-size: g.$fz-base;
+    }
+  }
+
+  .p-cta__btn {
+    margin-top: 3.2rem;
+    @include g.mq(sm) {
+      margin-top: 1.5rem;
+    }
+    .c-btn {
+      margin: 0 auto;
+      padding: 0.7rem 0.9rem;
+      width: 38.5rem;
+      @include g.mq(sm) {
+        width: 35rem;
+      }
+    }
+  }
+}
+
+.p-cta__regsiter {
+  .p-cta__card__description {
+  }
+}
+
+.p-cta__contact {
+  .p-cta__card__description {
+    display: flex;
+    justify-content: center;
+    @include g.mq(sm) {
+      align-items: center;
+    }
+    &::before {
+      content: "";
+      width: 5rem;
+      height: 5rem;
+      background: url("../img/icon/gift.svg") no-repeat center center/contain;
+      @include g.mq(sm) {
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+  }
+}

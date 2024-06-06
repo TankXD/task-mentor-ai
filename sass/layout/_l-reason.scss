@@ -1,0 +1,15 @@
+@use "../global/" as g;
+
+.l-reason {
+  padding-top: 20.5rem;
+  padding-bottom: 13.6rem;
+  background-color: g.$c-gray;
+  overflow: hidden;
+  @include g.mq(sm) {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+
+.l-reason__inner {
+}

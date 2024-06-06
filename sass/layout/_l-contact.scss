@@ -1,0 +1,9 @@
+@use "../global/" as g;
+.l-contact {
+  background-color: g.$c-gray;
+}
+
+.l-contact__inner {
+  max-width: calc(90rem + 10rem * 2);
+  padding-inline: 10rem;
+}

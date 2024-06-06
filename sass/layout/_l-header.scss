@@ -1,0 +1,20 @@
+@use "../global" as g;
+
+.l-header {
+  position: fixed;
+  background-color: g.$c-white;
+  height: 8rem;
+  top: 0;
+  width: 100%;
+  z-index: g.$z-header;
+}
+
+.l-header__inner {
+  max-width: calc(138rem + 2rem * 2);
+  height: inherit;
+  padding-inline: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}

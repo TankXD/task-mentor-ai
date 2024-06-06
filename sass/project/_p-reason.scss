@@ -1,0 +1,114 @@
+@use "../global/" as g;
+
+.p-reason__body {
+  margin-top: 10.5rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 14.3rem;
+  @include g.mq(sm) {
+    margin-top: 3rem;
+    gap: 5rem;
+  }
+
+  .p-reason__list:nth-child(even) {
+    &:after {
+      right: 30.5555%;
+      left: auto;
+      @include g.mq(xl) {
+        right: calc(50% - 28rem);
+        left: auto;
+      }
+    }
+    .p-reason__item {
+      flex-direction: row-reverse;
+      @include g.mq(sm) {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+.p-reason__list {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100vw;
+    height: calc(100% + 3.5rem * 2);
+    left: 30.5555%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: g.$c-white;
+    @include g.mq(xl) {
+      left: calc(50% - 28rem);
+    }
+    @include g.mq(sm) {
+      display: none;
+    }
+  }
+}
+.p-reason__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-inline: auto;
+  gap: 3rem;
+  max-width: calc(101.9rem + 7rem * 2);
+  padding-inline: 7rem;
+  margin-inline: auto;
+  @include g.mq(sm) {
+    padding-inline: 2rem;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+.p-reason__img {
+  z-index: 1;
+  //   flex: 1;
+  img {
+  }
+}
+
+.p-reason__text-wrap {
+  z-index: 1;
+  //   max-width: 46rem;
+  max-width: calc(46rem / 101.9rem * 100%);
+  @include g.mq(sm) {
+    max-width: 100%;
+  }
+}
+
+.p-reason__item__title-wrap {
+  padding-bottom: 2rem;
+  border-bottom: 3px solid g.$c-blue;
+}
+
+.p-reason__item__sub-title {
+  color: g.$c-blue;
+  font-family: Roboto;
+
+  font-size: clamp(1.4rem, 0.943rem + 0.595vw, 1.8rem);
+  font-weight: 700;
+  @include g.mq(sm) {
+    font-size: 1.6rem;
+  }
+}
+
+.p-reason__item__title {
+  font-size: clamp(1.5rem, 0.471rem + 1.339vw, 2.4rem);
+  font-weight: 700;
+  @include g.mq(sm) {
+    font-size: 2.4rem;
+  }
+}
+
+.p-reason__item__description {
+  margin-top: 2rem;
+  font-size: clamp(1.3rem, 0.957rem + 0.446vw, 1.6rem);
+  @include g.mq(sm) {
+    font-size: 1.6rem;
+  }
+}

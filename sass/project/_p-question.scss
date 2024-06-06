@@ -1,0 +1,140 @@
+@use "../global" as g;
+
+.p-question__body {
+  max-width: 90rem;
+  margin-inline: auto;
+
+  margin-top: 7rem;
+  @include g.mq(sm) {
+    margin-top: 3rem;
+  }
+}
+
+.p-question__qna-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  @include g.mq(sm) {
+    gap: 3rem;
+  }
+}
+
+.p-question__qna {
+  border-radius: 1.5rem;
+  background: g.$c-white;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 3rem 5rem;
+  @include g.mq(sm) {
+    padding: 2rem;
+  }
+}
+
+.p-qna__head {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 2px solid g.$c-blue;
+  @include g.mq(sm) {
+    padding-bottom: 0rem;
+    border-bottom: none;
+    align-items: flex-start;
+    padding-right: 2.9rem;
+  }
+  position: relative;
+}
+
+.p-qna__head__icon,
+.p-qna__body__icon {
+  font-family: Roboto;
+
+  color: g.$c-blue;
+  font-size: 2.4rem;
+  font-weight: 700;
+  @include g.mq(sm) {
+    font-size: 1.6rem;
+  }
+}
+
+.p-qna__head__question {
+  font-size: 1.8rem;
+  font-weight: 700;
+  @include g.mq(sm) {
+    font-size: 1.6rem;
+  }
+}
+
+.p-qna__open-btn {
+  position: absolute;
+  width: 2.4rem;
+  height: 2.4rem;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 2.4rem;
+    height: 0.26rem;
+    background-color: g.$c-blue;
+    right: 0;
+    top: 50%;
+    transition: 0.3s ease;
+  }
+  &::before {
+    transform: translateY(-50%);
+  }
+  &::after {
+    width: 2.4rem;
+    height: 0.26rem;
+    transform: translateY(-50%) rotate(90deg);
+  }
+
+  @include g.mq(md) {
+    display: none;
+  }
+}
+
+.p-qna__body {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-top: 1.2rem;
+  @include g.mq(sm) {
+    padding-top: 0;
+    align-items: flex-start;
+  }
+}
+
+.p-qna__body__answer {
+  @include g.mq(sm) {
+    font-size: 1.6rem;
+  }
+}
+
+// accordion jquery version
+.p-qna__body {
+  @include g.mq(sm) {
+    display: none;
+    padding-top: 2rem;
+  }
+}
+
+// accordion js version
+// .p-qna__body {
+//   overflow: hidden;
+//   transition: all 0.3s ease;
+//   @include g.mq(sm) {
+//     max-height: 0;
+//   }
+// }
+
+// .p-question__qna.is-open-qna {
+//   .p-qna__body {
+//     padding-top: 2rem;
+//   }
+//   .p-qna__open-btn::after {
+//     transform: translateY(-50%) rotate(0);
+//   }
+// }

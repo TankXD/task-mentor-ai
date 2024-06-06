@@ -1,0 +1,42 @@
+@use "../global/" as g;
+
+.p-problem__head {
+  padding-block: 0.4rem;
+  @include g.mq(sm) {
+    display: none;
+  }
+  img {
+  }
+}
+
+.p-problem__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
+  @include g.mq(sm) {
+    gap: 1rem;
+  }
+}
+
+.p-problem__description {
+  font-size: g.$fz-18-24;
+  font-weight: 700;
+}
+
+.p-problem__list {
+}
+
+.p-problem__item {
+  font-size: g.$fz-md;
+  display: flex;
+  align-items: center;
+
+  gap: 0.6rem;
+  &::before {
+    content: "";
+    width: 2.2rem;
+    height: 2.2rem;
+    background: url("../img/icon/check.svg") no-repeat center center/contain;
+  }
+}

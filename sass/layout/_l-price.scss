@@ -1,0 +1,12 @@
+@use "../global/" as g;
+
+.l-price {
+}
+
+.l-price__inner {
+  padding: 10rem 5rem;
+  @include g.mq(sm) {
+    padding: 5rem 2rem;
+  }
+  margin: 0 auto;
+}

@@ -1,0 +1,13 @@
+@use "../global/" as g;
+
+.l-vision {
+  background: url("../img/vision/vision-bg.webp") center center / cover no-repeat;
+  @include g.mq(sm) {
+    background: url("../img/vision/vision-bg-sp.webp") center center / cover no-repeat;
+  }
+}
+
+.l-vision__inner {
+  max-width: calc(102rem + 5rem * 2);
+  padding-inline: 5rem;
+}

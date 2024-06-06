@@ -1,0 +1,24 @@
+@use "../global/" as g;
+
+html {
+  // font-size: 2.3255813vw;
+  // viewport 430 = 10px
+  font-size: calc(100vw * 10 / 430);
+  @include g.mq(md) {
+    font-size: 62.5%;
+  }
+  scroll-margin-top: 80px;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  color: g.$c-base;
+  line-height: g.$lh-sp;
+  font-size: g.$fz-base;
+  @include g.mq(md) {
+    line-height: g.$lh-pc;
+  }
+  &.is-open {
+    overflow: hidden;
+  }
+}

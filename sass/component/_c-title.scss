@@ -1,0 +1,25 @@
+@use "../global/" as g;
+.c-title-head {
+  text-align: center;
+
+  &.c-title-head--w {
+    color: g.$c-white;
+  }
+}
+
+.c-title {
+  font-family: Roboto;
+  font-size: 6.2rem;
+  font-weight: 700;
+  line-height: 1;
+  @include g.mq(sm) {
+    font-size: 3.2rem;
+  }
+}
+
+.c-title-sub {
+  font-size: 1.8rem;
+  @include g.mq(sm) {
+    font-size: 1.6rem;
+  }
+}

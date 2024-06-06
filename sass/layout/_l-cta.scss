@@ -1,0 +1,16 @@
+@use "../global/" as g;
+
+.l-cta {
+  background: url("../img/cta/cta_bg.webp") no-repeat center center / cover;
+  @include g.mq(sm) {
+    background: url("../img/cta/cta_bg-sp.webp") no-repeat center center / cover;
+  }
+}
+.l-cta__inner {
+  margin: 0 auto;
+  padding: 10rem 5rem;
+  max-width: calc(g.$inner-width + 5rem * 2);
+  @include g.mq(sm) {
+    padding: 5rem 2rem;
+  }
+}
